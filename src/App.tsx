@@ -1,16 +1,16 @@
-import * as ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import styled from '@emotion/styled';
-
-const Text = styled.p`
-  color: turquoise;
-`;
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import MainLayout from 'components/layout/MainLayout';
+import { routes } from 'routes';
 
 function App() {
   return (
-    <>
-      <Text>Click on the Vite and React logos to learn more</Text>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<MainLayout />}>
+          {routes}
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

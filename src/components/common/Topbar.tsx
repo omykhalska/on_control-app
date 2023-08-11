@@ -1,9 +1,24 @@
-import React from 'react';
+import { AppBar, Toolbar, Typography } from '@mui/material';
+import colorConfigs from 'configs/colorConfigs';
+import sizeConfigs from 'configs/sizeConfigs';
 
-type Props = {};
-
-const Topbar = (props: Props) => {
-  return <div>Topbar</div>;
+const Topbar = () => {
+  return (
+    <AppBar
+      position="fixed"
+      sx={{
+        width: `calc(100% - ${sizeConfigs.sidebar.width})`,
+        marginLeft: sizeConfigs.sidebar.width,
+        boxShadow: 'unset',
+        backgroundColor: colorConfigs.topbar.bg,
+        color: colorConfigs.topbar.color,
+      }}
+    >
+      <Toolbar>
+        <Typography variant="h6">OnControl App</Typography>
+      </Toolbar>
+    </AppBar>
+  );
 };
 
 export default Topbar;

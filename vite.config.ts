@@ -3,7 +3,7 @@ import { defineConfig } from 'vitest/config';
 import tsconfigPaths from 'vite-tsconfig-paths';
 
 export default defineConfig({
-  base: '/on_control-app/',
+  base: '/',
   plugins: [
     react({
       jsxImportSource: '@emotion/react',

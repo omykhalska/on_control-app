@@ -1,9 +1,10 @@
-import React from 'react';
+type Props = {
+  state?: string;
+  children: React.ReactNode;
+};
 
-type Props = {};
-
-const PageWrapper = (props: Props) => {
-  return <div>PageWrapper</div>;
+const PageWrapper = ({ state = '', children }: Props) => {
+  return <>{children}</>;
 };
 
 export default PageWrapper;
