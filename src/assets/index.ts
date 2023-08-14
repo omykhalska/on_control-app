@@ -1,6 +1,6 @@
 const assets = {
   images: {
-    logo: require('./images/icons8-management-64.png'),
+    logo: new URL('./images/logo.png', import.meta.url).href,
   },
 };
 
